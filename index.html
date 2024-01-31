@@ -21,6 +21,25 @@
             const lowerCase = remainder.substring(1);
             return upperCase + lowerCase;
         }
+        function lastLetter(string) {
+            const reverse = string.split('').reverse().join('');
+            return reverse.at(0);
+        }
+
+        let answer = parseInt(prompt("Enter a number:"));
+
+        for (let i = 1; i <= answer; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                console.log("FizzBuzz");
+            } else if (i % 3 === 0) {
+                console.log("Fizz");
+            } else if (i % 5 === 0) {
+                console.log("Buzz");
+            } else {
+                console.log(i);
+            }
+        }
+
     </script>
 </body>
 </html>
