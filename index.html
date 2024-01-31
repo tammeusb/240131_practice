@@ -26,7 +26,7 @@
             return reverse.at(0);
         }
 
-        let answer = parseInt(prompt("Enter a number:"));
+        /* let answer = parseInt(prompt("Enter a number:"));
 
         for (let i = 1; i <= answer; i++) {
             if (i % 3 === 0 && i % 5 === 0) {
@@ -37,6 +37,34 @@
                 console.log("Buzz");
             } else {
                 console.log(i);
+            }
+         }  */ //have to remove this for rock paper scissors
+
+        function getComputerChoice() {
+            let num = Math.random();
+            let choice;
+            if (num < .33) {
+                choice = "rock";
+            } else if (num >= .33 && num < .66) {
+                choice = "paper";
+            } else {
+                choice = "scissors";
+            }
+            return choice;
+        }
+
+        function rockPaperScissors(playerSelection, computerSelection) {
+            input = prompt("Rock, Paper, Scissors!");
+            playerSelection = input.toLowerCase();
+            computerSelection = getComputerChoice();
+
+
+            if (playerSelection === "rock" && computerSelection === "scissors") {
+                console.log(playerSelection + " beats " + computerSelection + ", good job!");
+            } else if (playerSelection === "rock" && computerSelection === "paper") {
+                console.log(computerSelection + " beats " + playerSelection + ", try again!");
+            } else if (playerSelection === "rock" && computerSelection === "rock") {
+                console.log("tie!");
             }
         }
 
