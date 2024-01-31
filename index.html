@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Functions</title>
+</head>
+<body>
+    <script>
+        function add7(num) {
+            return num + 7;
+        }
+        function multiply(num1, num2) {
+            return num1 * num2;
+        }
+        function capitalize(string) {
+            const firstLetter = string.at(0);
+            const upperCase = firstLetter.toUpperCase();
+            const remainder = string.toLowerCase();
+            const lowerCase = remainder.substring(1);
+            return upperCase + lowerCase;
+        }
+    </script>
+</body>
+</html>

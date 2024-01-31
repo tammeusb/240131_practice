@@ -1,0 +1,1 @@
+Practice with Javascript functions, mainly questions from Fundamentals pt 3
